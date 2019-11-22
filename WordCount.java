@@ -15,7 +15,7 @@ public class WordCount {
 
         public void map(Text text, Text value, OutputCollector<Text, IntWritable> outputCollector, Reporter reporter) throws IOException {
             String line = value.toString();
-            String[] words = line.split(" ");
+            String[] words = line.split("\\s+");
             for (String word : words
                  ) {
                 outputCollector.collect(new Text(word), new IntWritable(1));
@@ -42,11 +42,15 @@ public class WordCount {
         JobConf jobConf = new JobConf();
 
         jobConf.setJobName("Count Word");
+
+        jobConf.setJarByClass(WordCount.class);
+
         jobConf.setMapperClass(E_Map.class);
-        jobConf.setCombinerClass(E_Reduce.class);
         jobConf.setReducerClass(E_Reduce.class);
+
         jobConf.setOutputKeyClass(Text.class);
         jobConf.setOutputValueClass(IntWritable.class);
+
         jobConf.setInputFormat(TextInputFormat.class);
         jobConf.setOutputFormat(TextOutputFormat.class);
 
