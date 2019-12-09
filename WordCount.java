@@ -1,62 +1,66 @@
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.*;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import java.io.IOException;
-import java.util.Iterator;
 
 public class WordCount {
-    public static class E_Map extends MapReduceBase implements Mapper<
-            Text,
-            Text,
-            Text,
-            IntWritable> {
 
-        public void map(Text text, Text value, OutputCollector<Text, IntWritable> outputCollector, Reporter reporter) throws IOException {
-            String line = value.toString();
-            String[] words = line.split("\\s+");
-            for (String word : words
-                 ) {
-                outputCollector.collect(new Text(word), new IntWritable(1));
-            };
+    public static class WC_Mapper extends Mapper<Object, Text, Text, IntWritable> {
+        @Override
+        protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
+            context.write(value, new IntWritable(1));
         }
     }
 
-    public static class E_Reduce extends MapReduceBase implements Reducer<
-            Text,
-            IntWritable,
-            Text,
-            IntWritable> {
-
-        public void reduce(Text text, Iterator<IntWritable> iterator, OutputCollector<Text, IntWritable> outputCollector, Reporter reporter) throws IOException {
+    public static class WC_Reducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+        @Override
+        protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
             int sum = 0;
-            while(iterator.hasNext()) {
-                sum += iterator.next().get();
+            for (IntWritable value: values
+                 ) {
+                sum += value.get();
             }
-            outputCollector.collect(new Text(text), new IntWritable(sum));
+            context.write(key, new IntWritable(sum));
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        JobConf jobConf = new JobConf();
+    public static void main(String[] args) {
+        Configuration conf = new Configuration();
+        try {
+            Job job = Job.getInstance(conf);
+            job.setJobName("Dem so tu trong file");
 
-        jobConf.setJobName("Count Word");
+            job.setMapperClass(WC_Mapper.class);
+            job.setReducerClass(WC_Reducer.class);
+            job.setJarByClass(WordCount.class);
 
-        jobConf.setJarByClass(WordCount.class);
+            job.setOutputKeyClass(Text.class);
+            job.setOutputValueClass(IntWritable.class);
 
-        jobConf.setMapperClass(E_Map.class);
-        jobConf.setReducerClass(E_Reduce.class);
+            if(args.length >= 2) {
+                FileInputFormat.addInputPath(job, new Path(args[0]));
+                FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-        jobConf.setOutputKeyClass(Text.class);
-        jobConf.setOutputValueClass(IntWritable.class);
+                job.waitForCompletion(true);
+            }
+            else {
+                System.out.println("You need add input file and output file");
+                System.exit(0);
+            }
 
-        jobConf.setInputFormat(TextInputFormat.class);
-        jobConf.setOutputFormat(TextOutputFormat.class);
-
-        FileInputFormat.setInputPaths(jobConf, new Path(args[0]));
-        FileOutputFormat.setOutputPath(jobConf, new Path(args[1]));
-
-        JobClient.runJob(jobConf);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
