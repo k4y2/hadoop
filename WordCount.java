@@ -15,7 +15,12 @@ public class WordCount {
     public static class WC_Mapper extends Mapper<Object, Text, Text, IntWritable> {
         @Override
         protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-            context.write(value, new IntWritable(1));
+            String line = value.toString();
+            String[] words = line.split("\\s+");
+            for (String word : words
+                 ) {
+                context.write(new Text(word), new IntWritable(1));
+            }
         }
     }
 
