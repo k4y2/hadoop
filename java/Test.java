@@ -15,12 +15,14 @@ public class Test {
         int k = 2;
         Configuration conf = new Configuration();
         conf.set("kmeans.k", k + "");
+        InitMapper mapper = new InitMapper();
+        InitReducer reducer = new InitReducer();
         try {
             Job job = Job.getInstance(conf);
             job.setJobName("Generate cluster center");
 
-            job.setMapperClass(InitMapper.class);
-            job.setReducerClass(InitReducer.class);
+            job.setMapperClass(mapper.getClass());
+            job.setReducerClass(reducer.getClass());
             job.setJarByClass(Test.class);
 
             job.setOutputKeyClass(IntWritable.class);
