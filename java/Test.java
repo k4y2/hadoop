@@ -49,8 +49,8 @@ public class Test {
                     FSDataInputStream is = fs.open(path);
                     for (int j = 0; j < k; j++) {
                         String line = is.readLine();
-                        String[] tmp = line.split(" ");
-                        conf2.set("kmeans.center"+j, tmp[2]);
+                        String[] tmp = line.split("\\s+");
+                        conf2.set("kmeans.center"+j, tmp[1]);
                     }
                     Job job2 = Job.getInstance(conf2);
                     job2.setJobName("Calculating Cluster");
