@@ -13,12 +13,16 @@ import java.net.URI;
 
 public class Test {
 
-    public static boolean compare(FSDataInputStream is1, FSDataInputStream is2, int k) throws IOException {
+    public static boolean compare(FSDataInputStream is1, FSDataInputStream is2, int k, Configuration conf) throws IOException {
+        boolean check = true;
         for (int j = 0; j < k; j++) {
             String line1 = is1.readLine();
             String line2 = is2.readLine();
-            if(!line1.equalsIgnoreCase(line2)) return false;
+            String[] tmp = line1.split("\\s+");
+            conf.set("kmeans.center"+j, tmp[1]);
+            if(!line1.equalsIgnoreCase(line2)) check = false;
         }
+        if(!check) return false;
         return true;
     }
 
@@ -63,15 +67,11 @@ public class Test {
                         Configuration conf4 = new Configuration();
                         FileSystem fs2 = FileSystem.get(URI.create(uri2),conf4);
                         FSDataInputStream is2 = fs2.open(path2);
-                        if(compare(is,is2,k)) {
+                        if(compare(is,is2,k,conf2)) {
                             stop=true;
                         }
                     }
-                    for (int j = 0; j < k; j++) {
-                        String line = is.readLine();
-                        String[] tmp = line.split("\\s+");
-                        conf2.set("kmeans.center"+j, tmp[1]);
-                    }
+                    
                     Job job2 = Job.getInstance(conf2);
                     job2.setJobName("Calculating Cluster "+i);
                     job2.setJarByClass(Test.class);
