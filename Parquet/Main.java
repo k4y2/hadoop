@@ -37,6 +37,7 @@ public class Main {
             System.err.println("<Avro File> <Input> <Output>");
             System.exit(-1);
         }
+        /* Some thing error here */
         schema = new Schema.Parser().parse(args[0]);
         Configuration conf = new Configuration();
         try {
