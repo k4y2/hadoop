@@ -2,9 +2,11 @@ import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
+import org.apache.parquet.example.data.Group;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
@@ -40,14 +42,15 @@ public class Main extends Configured implements Tool {
     public int run(String[] args) throws Exception {
         Job job = Job.getInstance(getConf());
 
-        schema = new Schema.Parser().parse(new File(args[0]));
+        schema = new Schema.Parser().parse(ClassLoader.getSystemResourceAsStream(args[0]));
         job.setJobName("Convert text to Parquet");
         job.setMapperClass(ConvertMapper.class);
         job.setNumReduceTasks(0);
         job.setOutputKeyClass(Void.class);
-        AvroParquetOutputFormat.setSchema(job, schema);
+        job.setOutputValueClass(Group.class);
         job.setOutputValueClass(GenericRecord.class);
         job.setOutputFormatClass(AvroParquetOutputFormat.class);
+        AvroParquetOutputFormat.setSchema(job, schema);
 
         FileInputFormat.addInputPath(job, new Path(args[1]));
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
