@@ -10,14 +10,16 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ConvertParquet {
 
     private static Schema schema;
 
-    public class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecord> {
+    public static class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecord> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             String line = value.toString();
@@ -33,13 +35,20 @@ public class ConvertParquet {
     public static void main(String[] args) {
         Configuration conf = new Configuration();
         try {
-            schema = new Schema.Parser().parse(new File(args[0]));
+            File file = new File(args[0]);
+            DataInputStream dis = new DataInputStream(new FileInputStream(file));
+            String schemaString = "";
+            String tmp;
+            while((tmp=dis.readLine())!=null) {
+                schemaString += tmp;
+            }
+            schema = new Schema.Parser().parse(schemaString);
             Job job = Job.getInstance(conf, "Convert");
+            job.setJarByClass(ConvertParquet.class);
+            job.setMapperClass(ConvertMapper.class);
             job.setOutputKeyClass(Void.class);
             job.setOutputValueClass(GenericRecord.class);
             job.setNumReduceTasks(0);
-            job.setJarByClass(ConvertParquet.class);
-            job.setMapperClass(ConvertMapper.class);
 
             FileInputFormat.addInputPath(job, new Path(args[1]));
             FileOutputFormat.setOutputPath(job, new Path(args[2]));
