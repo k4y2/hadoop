@@ -1,0 +1,19 @@
+{
+ "type": "record",
+ "name": "empRecords",
+ "fields": 
+  [{
+   "name": "id", 
+   "type": "int"
+   
+  }, 
+  {
+   "name": "Name",
+   "type": "string"
+  },
+  {
+   "name": "Dept",
+   "type": "string"
+  }
+ ]
+}
