@@ -14,74 +14,66 @@
     <session id="-1324834914">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2987" />
-          <entry key="xml" value="118" />
+          <entry key="java" value="3048" />
+          <entry key="xml" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2987" />
-          <entry key="XML" value="118" />
+          <entry key="JAVA" value="3048" />
+          <entry key="XML" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="0-SNAPSHOT" value="1" />
           <entry key="avsc" value="1" />
           <entry key="class" value="20" />
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="20" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="UML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ParquetConvert" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+            <state relative-caret-position="497">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ConvertParquet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-663">
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -106,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ConvertParquet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ConvertParquet.java" />
       </list>
     </option>
   </component>
@@ -117,11 +109,35 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="9" />
     <option name="y" value="18" />
     <option name="width" value="1347" />
     <option name="height" value="690" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Maven</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>MavenModelInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -129,6 +145,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,63 +173,21 @@
             </path>
             <path>
               <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParquetConvert" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.parquet:parquet-column:1.11.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.parquet:parquet-column:1.11.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="parquet-column-1.11.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.parquet:parquet-column:1.11.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="parquet-column-1.11.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="parquet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.parquet:parquet-column:1.11.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="parquet-column-1.11.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="parquet" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParquetConvert" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.parquet:parquet-column:1.11.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="parquet-column-1.11.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="parquet" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579012699852" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579111440548" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -262,36 +237,47 @@
       <workItem from="1578720328052" duration="57000" />
       <workItem from="1578839629406" duration="1442000" />
       <workItem from="1579007714553" duration="4569000" />
-      <workItem from="1579104440822" duration="635000" />
+      <workItem from="1579104440822" duration="2576000" />
+      <workItem from="1579109795069" duration="1053000" />
+      <workItem from="1579110927753" duration="512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30756000" />
+    <option name="totallyTimeSpent" value="34262000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28097165" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.28987855" />
+      <window_info id="Structure" order="1" sideWeight="0.5017794" side_tool="true" weight="0.28987855" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5017794" side_tool="true" weight="0.28987855" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3291815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3291815" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3291815" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3291815" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3291815" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -395,19 +381,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/emp.avsc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/emp.avsc" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/parquet/parquet-column/1.11.0/parquet-column-1.11.0.jar!/org/apache/parquet/example/data/simple/NanoTime.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -422,42 +396,184 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java" />
+    <entry file="uml://MAVEN/ParquetConvert:ParquetConvert:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>ParquetConvert:ParquetConvert:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">ParquetConvert:ParquetConvert:1.0-SNAPSHOT</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-annotations:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-annotations:jar:2.7.7/jdk.tools:jdk.tools:jar:1.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.google.guava:guava:jar:11.0.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.google.guava:guava:jar:11.0.2/com.google.code.findbugs:jsr305:jar:1.3.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-cli:commons-cli:jar:1.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.commons:commons-math3:jar:3.1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/xmlenc:xmlenc:jar:0.52</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-httpclient:commons-httpclient:jar:3.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-httpclient:commons-httpclient:jar:3.1/commons-logging:commons-logging:jar:1.0.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-httpclient:commons-httpclient:jar:3.1/commons-codec:commons-codec:jar:1.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-codec:commons-codec:jar:1.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-io:commons-io:jar:2.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-net:commons-net:jar:3.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-collections:commons-collections:jar:3.2.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/javax.servlet:servlet-api:jar:2.5</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.mortbay.jetty:jetty:jar:6.1.26</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.mortbay.jetty:jetty-util:jar:6.1.26</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.mortbay.jetty:jetty-sslengine:jar:6.1.26</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/javax.servlet.jsp:jsp-api:jar:2.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-core:jar:1.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jettison:jettison:jar:1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1/javax.xml.bind:jaxb-api:jar:2.2.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1/javax.xml.bind:jaxb-api:jar:2.2.2/javax.xml.stream:stax-api:jar:1.0-2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/com.sun.xml.bind:jaxb-impl:jar:2.2.3-1/javax.xml.bind:jaxb-api:jar:2.2.2/javax.activation:activation:jar:1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-core-asl:jar:1.8.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-mapper-asl:jar:1.8.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-jaxrs:jar:1.8.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-jaxrs:jar:1.8.3/org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-jaxrs:jar:1.8.3/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-xc:jar:1.8.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-xc:jar:1.8.3/org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-json:jar:1.9/org.codehaus.jackson:jackson-xc:jar:1.8.3/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-server:jar:1.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.sun.jersey:jersey-server:jar:1.9/asm:asm:jar:3.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/log4j:log4j:jar:1.2.17</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/net.java.dev.jets3t:jets3t:jar:0.9.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/net.java.dev.jets3t:jets3t:jar:0.9.0/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/net.java.dev.jets3t:jets3t:jar:0.9.0/org.apache.httpcomponents:httpclient:jar:4.1.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/net.java.dev.jets3t:jets3t:jar:0.9.0/org.apache.httpcomponents:httpcore:jar:4.1.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/net.java.dev.jets3t:jets3t:jar:0.9.0/com.jamesmurty.utils:java-xmlbuilder:jar:0.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-lang:commons-lang:jar:2.6</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-lang:commons-lang:jar:2.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-digester:commons-digester:jar:1.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-digester:commons-digester:jar:1.8/commons-beanutils:commons-beanutils:jar:1.7.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-digester:commons-digester:jar:1.8/commons-beanutils:commons-beanutils:jar:1.7.0/commons-logging:commons-logging:jar:1.0.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-digester:commons-digester:jar:1.8/commons-logging:commons-logging:jar:1.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-beanutils:commons-beanutils-core:jar:1.8.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/commons-configuration:commons-configuration:jar:1.6/commons-beanutils:commons-beanutils-core:jar:1.8.0/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.slf4j:slf4j-api:jar:1.7.10</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.slf4j:slf4j-log4j12:jar:1.7.10</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.codehaus.jackson:jackson-core-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.avro:avro:jar:1.7.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.avro:avro:jar:1.7.4/org.codehaus.jackson:jackson-core-asl:jar:1.8.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.avro:avro:jar:1.7.4/org.codehaus.jackson:jackson-mapper-asl:jar:1.8.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.avro:avro:jar:1.7.4/com.thoughtworks.paranamer:paranamer:jar:2.3</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.avro:avro:jar:1.7.4/org.xerial.snappy:snappy-java:jar:1.0.4.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.avro:avro:jar:1.7.4/org.slf4j:slf4j-api:jar:1.6.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.google.protobuf:protobuf-java:jar:2.5.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.google.code.gson:gson:jar:2.2.4</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.httpcomponents:httpclient:jar:4.2.5</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15/org.slf4j:slf4j-api:jar:1.7.5</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.apache.directory.api:api-asn1-api:jar:1.0.0-M20</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.apache.directory.api:api-asn1-api:jar:1.0.0-M20/org.slf4j:slf4j-api:jar:1.7.10</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.apache.directory.api:api-util:jar:1.0.0-M20</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.apache.directory.api:api-util:jar:1.0.0-M20/org.slf4j:slf4j-api:jar:1.7.10</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15/org.slf4j:slf4j-api:jar:1.7.10</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.curator:curator-framework:jar:2.7.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.hadoop:hadoop-auth:jar:2.7.7/org.apache.curator:curator-framework:jar:2.7.1/com.google.guava:guava:jar:16.0.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.jcraft:jsch:jar:0.1.54</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.curator:curator-client:jar:2.7.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.curator:curator-client:jar:2.7.1/org.slf4j:slf4j-api:jar:1.7.6</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.curator:curator-client:jar:2.7.1/com.google.guava:guava:jar:11.0.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.curator:curator-recipes:jar:2.7.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.curator:curator-recipes:jar:2.7.1/com.google.guava:guava:jar:11.0.2</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/com.google.code.findbugs:jsr305:jar:3.0.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.htrace:htrace-core:jar:3.1.0-incubating</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.zookeeper:zookeeper:jar:3.4.6</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.zookeeper:zookeeper:jar:3.4.6/org.slf4j:slf4j-api:jar:1.6.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.zookeeper:zookeeper:jar:3.4.6/org.slf4j:slf4j-log4j12:jar:1.6.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.zookeeper:zookeeper:jar:3.4.6/log4j:log4j:jar:1.2.16</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.zookeeper:zookeeper:jar:3.4.6/io.netty:netty:jar:3.7.0.Final</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.commons:commons-compress:jar:1.4.1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-common:jar:2.7.7/org.apache.commons:commons-compress:jar:1.4.1/org.tukaani:xz:jar:1.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-common:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-api:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-common:jar:2.7.7/com.sun.jersey:jersey-client:jar:1.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-common:jar:2.7.7/org.codehaus.jackson:jackson-jaxrs:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-common:jar:2.7.7/org.codehaus.jackson:jackson-xc:jar:1.9.13</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-common:jar:2.7.7/com.sun.jersey.contribs:jersey-guice:jar:1.9</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-client:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.7.7/org.apache.hadoop:hadoop-yarn-server-common:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.7.7/org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.7.7</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.7.7/org.fusesource.leveldbjni:leveldbjni-all:jar:1.8</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/com.google.inject.extensions:guice-servlet:jar:3.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/com.google.inject.extensions:guice-servlet:jar:3.0/com.google.inject:guice:jar:3.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/com.google.inject.extensions:guice-servlet:jar:3.0/com.google.inject:guice:jar:3.0/javax.inject:javax.inject:jar:1</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/com.google.inject.extensions:guice-servlet:jar:3.0/com.google.inject:guice:jar:3.0/aopalliance:aopalliance:jar:1.0</node>
+            <node x="" y="">org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.7.7/io.netty:netty:jar:3.6.2.Final</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.12526629740093737" x="3511.0" y="510.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        <state relative-caret-position="497">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ConvertParquet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-663">
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41954023" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.20124805" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.41954023" />
               </list>
             </option>
           </splitter-proportions>

@@ -15,7 +15,7 @@ import org.apache.parquet.example.data.Group;
 import java.io.File;
 import java.io.IOException;
 
-public class ConvertParquet{
+public class ConvertParquet {
 
     public static class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecord> {
         GenericRecord record;
