@@ -18,24 +18,19 @@ import java.io.IOException;
 public class ConvertParquet {
 
     public static class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecord> {
-        GenericRecord record;
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             String line = value.toString();
             String[] values = line.split("\\s+");
-
+            Configuration conf = context.getConfiguration();
+            String schemaStr = conf.get("schema");
+            GenericRecord record = new GenericData.Record(new Schema.Parser().parse(schemaStr));
             record.put("id", Integer.parseInt(values[0]));
             record.put("Name", values[1]);
             record.put("Dept", values[2]);
-            context.write(null, record);
+            context.write(null,record);
         }
 
-        @Override
-        protected void setup(Context context) throws IOException, InterruptedException {
-            Configuration conf = context.getConfiguration();
-            String schemaStr = conf.get("schema");
-            record = new GenericData.Record(new Schema.Parser().parse(schemaStr));
-        }
     }
 
     public static void main(String[] args) {
