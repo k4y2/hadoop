@@ -33,15 +33,21 @@ public class ConvertParquet {
 
     }
 
+    public static class ReadMapper extends Mapper<LongWritable, Group, Void, Text> {
+        @Override
+        protected void map(LongWritable key, Group value, Context context) throws IOException, InterruptedException {
+            String s = value.toString();
+            context.write(null, new Text(s));
+        }
+    }
+
     public static void main(String[] args) {
         Configuration conf = new Configuration();
         try {
-            /* Cach 2 */
             File file = new File(args[0]);
             Schema schema = new Schema.Parser().parse(file);
             conf.set("schema", String.valueOf(schema));
             Job job = Job.getInstance(conf, "Convert");
-
 
             job.setJarByClass(ConvertParquet.class);
             job.setMapperClass(ConvertMapper.class);
@@ -54,6 +60,16 @@ public class ConvertParquet {
             FileInputFormat.addInputPath(job, new Path(args[1]));
             FileOutputFormat.setOutputPath(job, new Path(args[2]));
             System.exit(job.waitForCompletion(true) ? 0 : 1);
+
+            Job job2 = Job.getInstance(conf, "Read Parquet");
+            job2.setJarByClass(ConvertParquet.class);
+            job2.setMapperClass(ReadMapper.class);
+            job2.setOutputKeyClass(Void.class);
+            job2.setOutputValueClass(Text.class);
+            FileInputFormat.addInputPath(job2, new Path(args[1]+"/part-m-00000.parquet"));
+            FileOutputFormat.setOutputPath(job2, new Path(args[1]+"/result"));
+            job2.setNumReduceTasks(0);
+            System.exit(job2.waitForCompletion(true) ? 0 : 1);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
