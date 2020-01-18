@@ -27,13 +27,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3547" />
+          <entry key="java" value="3637" />
           <entry key="xml" value="136" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3547" />
+          <entry key="JAVA" value="3637" />
           <entry key="XML" value="136" />
         </counts>
       </usages-collector>
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ConvertParquet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+            <state relative-caret-position="177">
+              <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,7 +190,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579275216518" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579322869263" />
     <property name="last_opened_file_path" value="D:/Source/TimeTableManagementSystem/TimeTableMgt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -249,12 +249,12 @@
       <workItem from="1579110927753" duration="1109000" />
       <workItem from="1579170701072" duration="73000" />
       <workItem from="1579265508173" duration="6501000" />
-      <workItem from="1579317455961" duration="667000" />
+      <workItem from="1579317455961" duration="2641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42100000" />
+    <option name="totallyTimeSpent" value="44074000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -266,7 +266,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822065" visible="true" weight="0.30445343" />
@@ -555,8 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ConvertParquet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+        <state relative-caret-position="177">
+          <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

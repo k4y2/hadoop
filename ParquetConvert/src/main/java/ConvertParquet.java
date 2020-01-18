@@ -9,6 +9,8 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.parquet.avro.AvroParquetInputFormat;
 import org.apache.parquet.avro.AvroParquetOutputFormat;
 import org.apache.parquet.example.data.Group;
 
@@ -59,15 +61,18 @@ public class ConvertParquet {
 
             FileInputFormat.addInputPath(job, new Path(args[1]));
             FileOutputFormat.setOutputPath(job, new Path(args[2]));
-            System.exit(job.waitForCompletion(true) ? 0 : 1);
+            job.waitForCompletion(true);
 
             Job job2 = Job.getInstance(conf, "Read Parquet");
             job2.setJarByClass(ConvertParquet.class);
             job2.setMapperClass(ReadMapper.class);
             job2.setOutputKeyClass(Void.class);
             job2.setOutputValueClass(Text.class);
-            FileInputFormat.addInputPath(job2, new Path(args[1]+"/part-m-00000.parquet"));
-            FileOutputFormat.setOutputPath(job2, new Path(args[1]+"/result"));
+            job2.setInputFormatClass(AvroParquetInputFormat.class);
+            AvroParquetInputFormat.setAvroReadSchema(job2, schema);
+            job2.setOutputFormatClass(TextOutputFormat.class);
+            FileInputFormat.addInputPath(job2, new Path(args[2]+"/part-m-00000.parquet"));
+            FileOutputFormat.setOutputPath(job2, new Path(args[2]+"/result"));
             job2.setNumReduceTasks(0);
             System.exit(job2.waitForCompletion(true) ? 0 : 1);
         } catch (IOException e) {
