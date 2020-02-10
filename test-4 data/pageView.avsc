@@ -1,0 +1,83 @@
+{
+ "type": "record",
+ "name": "pageView",
+ "fields": 
+  [{
+   "name": "timeCreate", 
+   "type": "string"
+   
+  }, 
+  {
+   "name": "cookieCreate",
+   "type": "string"
+  },
+  {
+   "name": "browserCode",
+   "type": "int"
+  },
+  {
+   "name": "browserVer",
+   "type": "string"
+  },
+  {
+   "name": "osCode",
+   "type": "int"
+  },
+  {
+   "name": "osVer",
+   "type": "string"
+  },
+  {
+   "name": "ip",
+   "type": "long"
+  },
+  {
+   "name": "locId",
+   "type": "int"
+  },
+  {
+   "name": "domain",
+   "type": "string"
+  },
+  {
+   "name": "siteId",
+   "type": "int"
+  },
+  {
+   "name": "cId",
+   "type": "int"
+  },
+  {
+   "name": "path",
+   "type": "string"
+  },
+  {
+   "name": "referer",
+   "type": "string"
+  },
+  {
+   "name": "guid",
+   "type": "long"
+  },
+  {
+   "name": "flashVersion",
+   "type": "string"
+  },
+  {
+   "name": "jre",
+   "type": "string"
+  },
+  {
+   "name": "sr",
+   "type": "string"
+  },
+  {
+   "name": "sc",
+   "type": "string"
+  },
+  {
+   "name": "geographic",
+   "type": "int"
+  },
+ ]
+}
