@@ -78,6 +78,6 @@
   {
    "name": "geographic",
    "type": "int"
-  },
- ]
+  }
+  ]
 }

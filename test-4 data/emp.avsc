@@ -1,0 +1,15 @@
+{
+ "type": "record",
+ "name": "empRecords",
+ "fields": 
+  [{
+   "name": "id", 
+   "type": "long"
+   
+  }, 
+  {
+   "name": "url",
+   "type": "string"
+  }
+ ]
+}
