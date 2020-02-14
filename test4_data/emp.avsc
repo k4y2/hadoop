@@ -1,0 +1,19 @@
+{
+ "type": "record",
+ "name": "data",
+ "fields": 
+  [{
+   "name": "guid", 
+   "type": "long"
+   
+  }, 
+  {
+   "name": "referer",
+   "type": "string"
+  },
+  {
+   "name": "ip",
+   "type": "long"
+  }
+ ]
+}
