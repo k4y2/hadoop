@@ -17,9 +17,9 @@ public class TimeMapper extends Mapper<LongWritable, GenericRecord, Text, Text> 
         String guid = value.get("guid").toString();
         long minutes = timeUnit.convert(timeCreate-cookieCreate, TimeUnit.MILLISECONDS);
         timeUnit = TimeUnit.SECONDS;
-        long second = timeUnit.convert(timeCreate-cookieCreate, TimeUnit.MILLISECONDS);
-        if(minutes<30) {
-            context.write(new Text(guid), new Text("00:"+minutes+":"+second));
+        long second = timeUnit.convert(timeCreate-cookieCreate, TimeUnit.MILLISECONDS)%60;
+        if(minutes<30 && minutes >= 0 && second >= 0) {
+            context.write(new Text(guid), new Text(minutes+"p"+second+"s"));
         }
     }
 }

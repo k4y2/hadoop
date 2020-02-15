@@ -36,25 +36,26 @@ public class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecor
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
         record.put("timeCreate", timeCreate.getTime());
         record.put("cookieCreate", cookieCreate.getTime());
-        //record.put("browserCode", Integer.parseInt(values[2]));
-        //record.put("browserVer", values[3]);
-        //record.put("osCode", Integer.parseInt(values[4]));
-        //record.put("osVer", values[5]);
-        record.put("ip", Long.parseLong(values[4]));
-        //record.put("locId", Integer.parseInt(values[7]));
-        //record.put("domain", values[8]);
-        //record.put("siteId", Integer.parseInt(values[9]));
-        //record.put("cId", Integer.parseInt(values[10]));
-        //record.put("path", values[11]);
-        record.put("referer", values[3]);
-        record.put("guid", Long.parseLong(values[2]));
-        //record.put("flashVersion", values[14]);
-        //record.put("jre", values[15]);
-        //record.put("sr", values[16]);
-        //record.put("sc", values[17]);
-        //record.put("geographic", Integer.parseInt(values[18]));
+        record.put("browserCode", Integer.parseInt(values[2]));
+        record.put("browserVer", values[3]);
+        record.put("osCode", Integer.parseInt(values[4]));
+        record.put("osVer", values[5]);
+        record.put("ip", Long.parseLong(values[6]));
+        record.put("locId", Integer.parseInt(values[7]));
+        record.put("domain", values[8]);
+        record.put("siteId", Integer.parseInt(values[9]));
+        record.put("cId", Integer.parseInt(values[10]));
+        record.put("path", values[11]);
+        record.put("referer", values[12]);
+        record.put("guid", Long.parseLong(values[13]));
+        record.put("flashVersion", values[14]);
+        record.put("jre", values[15]);
+        record.put("sr", values[16]);
+        record.put("sc", values[17]);
+        record.put("geographic", Integer.parseInt(values[18]));
         context.write(null,record);
     }
 
