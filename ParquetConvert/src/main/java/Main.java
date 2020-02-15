@@ -1,3 +1,4 @@
+import CalculateTime.TimeMapper;
 import ConvertToParquet.ConvertMapper;
 import MostIPUsed.IPMapper;
 import MostIPUsed.IPReducer;
@@ -9,7 +10,6 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.InputFormat;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
@@ -65,16 +65,30 @@ public class Main {
         Job job = Job.getInstance(conf,"Most IP used");
         job.setJarByClass(Main.class);
         job.setMapperClass(IPMapper.class);
-        job.setCombinerClass(IPReducer.class);
         job.setReducerClass(IPReducer.class);
 
         job.setOutputKeyClass(LongWritable.class);
         job.setOutputValueClass(IntWritable.class);
+        job.setMapOutputKeyClass(LongWritable.class);
+        job.setMapOutputValueClass(LongWritable.class);
         job.setInputFormatClass(AvroParquetInputFormat.class);
         AvroParquetInputFormat.setAvroReadSchema(job, schema);
-        
+
         FileInputFormat.addInputPath(job,new Path(args[2]+"/part-m-00000.parquet"));
         FileOutputFormat.setOutputPath(job, new Path(args[2]+"/MostIP"));
+        job.waitForCompletion(true);
+    }
+
+    public static void timeJob(Configuration conf, String[] args) throws IOException, ClassNotFoundException, InterruptedException {
+        Job job = Job.getInstance(conf,"Read date");
+        job.setMapperClass(TimeMapper.class);
+        job.setNumReduceTasks(0);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+        job.setInputFormatClass(AvroParquetInputFormat.class);
+        AvroParquetInputFormat.setAvroReadSchema(job,schema);
+        FileInputFormat.addInputPath(job,new Path(args[2]+"/part-m-00000.parquet"));
+        FileOutputFormat.setOutputPath(job, new Path(args[2]+"/CalculateTime"));
         job.waitForCompletion(true);
     }
 
@@ -82,8 +96,9 @@ public class Main {
         Configuration conf = new Configuration();
         try {
             doConvert(conf, args);
-            urlJob(conf, args);
-            ipJob(conf, args);
+//            urlJob(conf, args);
+//            ipJob(conf, args);
+            timeJob(conf,args);
 
         } catch (IOException | ClassNotFoundException | InterruptedException e) {
             e.printStackTrace();

@@ -3,6 +3,16 @@
  "name": "data",
  "fields": 
   [{
+   "name": "timeCreate", 
+   "type": "long",
+   "logicalType": "timestamp-millis"
+  }, 
+  {
+   "name": "cookieCreate", 
+   "type": "long",
+   "logicalType": "timestamp-millis"
+  }, 
+  {
    "name": "guid", 
    "type": "long"
    

@@ -24,20 +24,20 @@ public class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecor
         // Đọc dữ liệu và đưa vào GenericRecord
         String line = value.toString();
         String[] values = line.split("\\t");
-        //record.put("timeCreate", values[0]);
-        //record.put("cookieCreate", values[1]);
+        record.put("timeCreate", values[0]);
+        record.put("cookieCreate", values[1]);
         //record.put("browserCode", Integer.parseInt(values[2]));
         //record.put("browserVer", values[3]);
         //record.put("osCode", Integer.parseInt(values[4]));
         //record.put("osVer", values[5]);
-        record.put("ip", Long.parseLong(values[2]));
+        record.put("ip", Long.parseLong(values[4]));
         //record.put("locId", Integer.parseInt(values[7]));
         //record.put("domain", values[8]);
         //record.put("siteId", Integer.parseInt(values[9]));
         //record.put("cId", Integer.parseInt(values[10]));
         //record.put("path", values[11]);
-        record.put("referer", values[1]);
-        record.put("guid", Long.parseLong(values[0]));
+        record.put("referer", values[3]);
+        record.put("guid", Long.parseLong(values[2]));
         //record.put("flashVersion", values[14]);
         //record.put("jre", values[15]);
         //record.put("sr", values[16]);
