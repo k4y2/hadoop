@@ -27,7 +27,8 @@ public class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecor
         // Đọc dữ liệu và đưa vào GenericRecord
         String line = value.toString();
         String[] values = line.split("\\t");
-        /* Put dữ liệu date */
+
+        // Đưa các dữ liệu vào parquet file theo các fields
         Date timeCreate = null;
         Date cookieCreate = null;
         try {

@@ -24,8 +24,22 @@ public class Main {
 
     private static Schema schema;
 
-    // Config convertJob
+    public static void main(String[] args) {
+        Configuration conf = new Configuration();
+        try {
+            doConvert(conf, args);
+            urlJob(conf, args);
+            ipJob(conf, args);
+            timeJob(conf,args);
+
+        } catch (IOException | ClassNotFoundException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /* Config job chuyển dữ liệu Text -> Parquet */
     public static void doConvert(Configuration conf, String[] args) throws IOException, ClassNotFoundException, InterruptedException {
+        // Đọc schema avro từ file
         File file = new File(args[0]);
         schema = new Schema.Parser().parse(file);
         conf.set("schema", String.valueOf(schema));
@@ -45,22 +59,24 @@ public class Main {
         job.waitForCompletion(true);
     }
 
+    /*  Config job tìm url được truy cập nhiều nhất của mỗi guid */
     public static void urlJob(Configuration conf, String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Job job = Job.getInstance(conf, "Find the most accessed url");
         job.setJarByClass(Main.class);
         job.setMapperClass(UrlMapper.class);
         job.setReducerClass(UrlReducer.class);
-        //format
+        //input format
         job.setInputFormatClass(AvroParquetInputFormat.class);
         AvroParquetInputFormat.setAvroReadSchema(job, schema);
         job.setOutputKeyClass(LongWritable.class);
         job.setOutputValueClass(Text.class);
-        // input - output path
+
         FileInputFormat.addInputPath(job, new Path(args[2]+"/part-m-00000.parquet"));
         FileOutputFormat.setOutputPath(job, new Path(args[2]+"/MostURL"));
         job.waitForCompletion(true);
     }
 
+    /* Config job tìm top 1000 ip được sử dụng nhiều nhất */
     public static void ipJob(Configuration conf, String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Job job = Job.getInstance(conf,"Most IP used");
         job.setJarByClass(Main.class);
@@ -79,6 +95,7 @@ public class Main {
         job.waitForCompletion(true);
     }
 
+    /* Config job tìm các guid có timeCreate - cookieCreate < 30 */
     public static void timeJob(Configuration conf, String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Job job = Job.getInstance(conf,"Read date");
         job.setJarByClass(Main.class);
@@ -91,18 +108,5 @@ public class Main {
         FileInputFormat.addInputPath(job,new Path(args[2]+"/part-m-00000.parquet"));
         FileOutputFormat.setOutputPath(job, new Path(args[2]+"/CalculateTime"));
         job.waitForCompletion(true);
-    }
-
-    public static void main(String[] args) {
-        Configuration conf = new Configuration();
-        try {
-            doConvert(conf, args);
-            urlJob(conf, args);
-            ipJob(conf, args);
-            timeJob(conf,args);
-
-        } catch (IOException | ClassNotFoundException | InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }
