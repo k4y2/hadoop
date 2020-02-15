@@ -85,7 +85,7 @@ public class Main {
         job.setMapperClass(TimeMapper.class);
         job.setNumReduceTasks(0);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(LongWritable.class);
+        job.setOutputValueClass(Text.class);
         job.setInputFormatClass(AvroParquetInputFormat.class);
         AvroParquetInputFormat.setAvroReadSchema(job,schema);
         FileInputFormat.addInputPath(job,new Path(args[2]+"/part-m-00000.parquet"));
@@ -97,8 +97,8 @@ public class Main {
         Configuration conf = new Configuration();
         try {
             doConvert(conf, args);
-//            urlJob(conf, args);
-//            ipJob(conf, args);
+            urlJob(conf, args);
+            ipJob(conf, args);
             timeJob(conf,args);
 
         } catch (IOException | ClassNotFoundException | InterruptedException e) {
