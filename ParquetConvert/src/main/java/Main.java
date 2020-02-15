@@ -81,10 +81,11 @@ public class Main {
 
     public static void timeJob(Configuration conf, String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Job job = Job.getInstance(conf,"Read date");
+        job.setJarByClass(Main.class);
         job.setMapperClass(TimeMapper.class);
         job.setNumReduceTasks(0);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(Text.class);
+        job.setOutputValueClass(LongWritable.class);
         job.setInputFormatClass(AvroParquetInputFormat.class);
         AvroParquetInputFormat.setAvroReadSchema(job,schema);
         FileInputFormat.addInputPath(job,new Path(args[2]+"/part-m-00000.parquet"));

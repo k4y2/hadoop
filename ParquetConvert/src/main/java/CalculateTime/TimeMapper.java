@@ -6,17 +6,18 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
-public class TimeMapper extends Mapper<LongWritable, GenericRecord, Text, Text> {
+public class TimeMapper extends Mapper<LongWritable, GenericRecord, Text, LongWritable> {
     @Override
     protected void map(LongWritable key, GenericRecord value, Context context) throws IOException, InterruptedException {
+        TimeUnit timeUnit = TimeUnit.MINUTES;
         long timeCreate = Long.parseLong(value.get("timeCreate").toString());
         long cookieCreate = Long.parseLong(value.get("cookieCreate").toString());
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        Text keyOut = new Text(dateFormat.format(new Date(timeCreate)));
-        Text valueOut = new Text(new Date(cookieCreate).toString());
-        context.write(keyOut,valueOut);
+        String guid = value.get("guid").toString();
+        long subTime = timeUnit.convert(timeCreate-cookieCreate, TimeUnit.MILLISECONDS);
+        if(subTime<30) {
+            context.write(new Text(guid), new LongWritable(subTime));
+        }
     }
 }

@@ -9,6 +9,9 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Class Mapper để chuyển dữ liệu từ Text sang Parquet
@@ -24,8 +27,17 @@ public class ConvertMapper extends Mapper<LongWritable, Text, Void, GenericRecor
         // Đọc dữ liệu và đưa vào GenericRecord
         String line = value.toString();
         String[] values = line.split("\\t");
-        record.put("timeCreate", values[0]);
-        record.put("cookieCreate", values[1]);
+        /* Put dữ liệu date */
+        Date timeCreate = null;
+        Date cookieCreate = null;
+        try {
+            timeCreate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(values[0]);
+            cookieCreate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(values[1]);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        record.put("timeCreate", timeCreate.getTime());
+        record.put("cookieCreate", cookieCreate.getTime());
         //record.put("browserCode", Integer.parseInt(values[2]));
         //record.put("browserVer", values[3]);
         //record.put("osCode", Integer.parseInt(values[4]));
